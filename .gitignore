@@ -1,0 +1,63 @@
+# Oracle SQL Developer Data Modeler
+*.log
+*.tmp
+*.swp
+*~
+
+# Oracle SQL Developer - Cache și configurări locale
+.datamodeler/
+datamodeler/
+SQLDeveloper/
+
+# Fișiere temporare Oracle
+*.lck
+*.bak
+*.old
+
+# Export-uri și dump-uri temporare
+*.dmp
+*.exp
+*.dat
+
+# Fișiere de log Oracle
+alert_*.log
+trace_*.trc
+
+# Configurări locale și credențiale
+tnsnames.ora
+sqlnet.ora
+listener.ora
+*password*
+*credentials*
+.env
+
+# Fișiere de sistem
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE-uri și Editors
+.vscode/
+.idea/
+*.sublime-*
+.project
+.classpath
+.settings/
+
+# Documentație temporară
+~$*.docx
+~$*.xlsx
+
+# Build și output
+build/
+dist/
+target/
+out/
+
+# Backup-uri automate Data Modeler
+*.dmd.bak
+*.ddl.bak
+
+# Fișiere temporare SQL Developer
+afiedt.buf
+*.~sql

@@ -1,0 +1,135 @@
+INSERT INTO PERSOANE VALUES( 6050918123456, 'popa.oana@gmail.com', '0777777777' ); 
+
+INSERT INTO PERSOANE VALUES( 6060820234567, 'maria12@gmail.com', '0222333444' ); 
+
+INSERT INTO PERSOANE VALUES( 5041209654321, 
+'popion@gmail.com', '0111222333' ); 
+
+INSERT INTO PERSOANE VALUES( 1750409456789, 
+'cozma_gabriel1975@gmail.com', '0999888777' ); 
+
+INSERT INTO PERSOANE VALUES( 5040917134679, 'panainte.oct@gmail.com', '0333444555' ); 
+
+
+INSERT INTO PROPRIETARI VALUES( 1750409456789, 'Cozma Gabriel' ); 
+
+INSERT INTO PROPRIETARI VALUES( 6050918123456, 'Popa Oana-Maria' ); 
+
+
+INSERT INTO CLIENTI VALUES( 5040917134679, 'Panainte Silviu-Octavian' ); 
+
+INSERT INTO CLIENTI VALUES( 6060820234567, 'Tanasa Maria' ); 
+
+INSERT INTO CLIENTI VALUES( 5041209654321, 'Popescu Ion' ); 
+
+
+INSERT INTO CAZARI(CNP, NUME_CAZARE, PRET24H, ADRESA, ORAS, TARA, TIP_CAZARE) VALUES(
+    6050918123456,
+    'Pensiunea Margareta',
+    100,
+    'Bulevardul Traian 1',
+    'Vaslui',
+    'Romania',
+    'pensiune'
+);
+
+INSERT INTO CAZARI(CNP, NUME_CAZARE, PRET24H, ADRESA, ORAS, TARA, TIP_CAZARE) VALUES(
+    6050918123456,
+    'Hotel Europa',
+    100,
+    'Bulevardul Independentei',
+    'Iasi',
+    'Romania',
+    'hotel'
+);
+ 
+INSERT INTO CAZARI(CNP, NUME_CAZARE, PRET24H, ADRESA, ORAS, TARA, TIP_CAZARE) VALUES(
+    6050918123456,
+    'Deluxe Apartment',
+    300,
+    'Drumul Taberei 50',
+    'Bucuresti',
+    'Romania',
+    'apartament'
+);
+
+INSERT INTO CAZARI(CNP, NUME_CAZARE, PRET24H, ADRESA, ORAS, TARA, TIP_CAZARE) VALUES(
+    1750409456789,
+    'Motel ieftin',
+    50,
+    'Str. Giulesti 120',
+    'Bucuresti',
+    'Romania',
+    'motel'
+);
+
+INSERT INTO CAZARI(CNP, NUME_CAZARE, PRET24H, ADRESA, ORAS, TARA, TIP_CAZARE) VALUES(
+    1750409456789,
+    'Vila in padure',
+    2000,
+    'Str. Foresta 12',
+    'Vatra Dornei',
+    'Romania',
+    'vila'
+);
+
+
+INSERT INTO REZERVARI(CNP, ID_CAZARE, DURATA_ZILE, DATA_INCEPUT) VALUES(
+    5040917134679,
+    50,
+    20,
+    '30-MAY-2026'
+); 
+
+INSERT INTO REZERVARI(CNP, ID_CAZARE, DURATA_ZILE, DATA_INCEPUT) VALUES(
+    5040917134679,
+    53,
+    5,
+    '02-FEB-2026'
+); 
+
+INSERT INTO REZERVARI(CNP, ID_CAZARE, DURATA_ZILE, DATA_INCEPUT) VALUES(
+    5041209654321,
+    51,
+    2,
+    '15-AUG-2026'
+); 
+
+INSERT INTO REZERVARI(CNP, ID_CAZARE, DURATA_ZILE, DATA_INCEPUT) VALUES(
+    5041209654321,
+    52,
+    11,
+    '09-SEP-2027'
+);  
+
+INSERT INTO REZERVARI(CNP, ID_CAZARE, DURATA_ZILE, DATA_INCEPUT) VALUES(
+    6060820234567,
+    54,
+    7,
+    '20-JUN-2026'
+); 
+
+
+INSERT INTO RECENZII VALUES(
+    2000,
+    'Foarte frumos mai venim',
+    5
+);
+
+INSERT INTO RECENZII VALUES(
+    2001,
+    'Decent',
+    3
+);
+
+INSERT INTO RECENZII VALUES(
+    2002,
+    NULL,
+    5
+);
+
+INSERT INTO RECENZII VALUES(
+    2003,
+    'Nu ne-a placut',
+    1
+);

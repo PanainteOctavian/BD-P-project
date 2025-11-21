@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="prj" id="39F88796-F926-D53C-EDCF-D23FDCA13FA3" version="3.5">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-25 10:57:17 UTC</createdTime>
+<ownerDesignName>prj_1</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>39F88796-F926-D53C-EDCF-D23FDCA13FA3</designId>
+</OSDM_Design>
