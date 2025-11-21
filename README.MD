@@ -1,74 +1,74 @@
 # Hospitality Booking Platform - Database Project
 
-Bază de date Oracle pentru o platformă de rezervări în domeniul ospitalității (hoteluri, pensiuni, apartamente, moteluri, vile).
+Oracle database for a hospitality booking platform (hotels, guesthouses, apartments, motels, villas).
 
-## Cuprins
-- [Descriere](#descriere)
-- [Structura Bazei de Date](#structura-bazei-de-date)
-- [Diagrama ER](#diagrama-er)
-- [Instalare](#instalare)
-- [Constrained și Reguli](#constrained-și-reguli)
-- [Exemple de Utilizare](#exemple-de-utilizare)
-- [Tehnologii Utilizate](#tehnologii-utilizate)
+## Table of Contents
+- [Description](#description)
+- [Database Structure](#database-structure)
+- [ER Diagram](#er-diagram)
+- [Installation](#installation)
+- [Constraints and Rules](#constraints-and-rules)
+- [Usage Examples](#usage-examples)
+- [Technologies Used](#technologies-used)
 
-## Descriere
+## Description
 
-Acest proiect implementează o bază de date completă pentru gestionarea unei platforme de rezervări în domeniul ospitalității. Baza de date suportă:
+This project implements a complete database for managing a hospitality booking platform. The database supports:
 
-- Gestionarea persoanelor (proprietari și clienți)
-- Gestionarea cazărilor (hoteluri, pensiuni, apartamente, moteluri, vile)
-- Sistem de rezervări cu validare automată a datelor
-- Sistem de recenzii pentru cazări
+- Management of people (owners and clients)
+- Management of accommodations (hotels, guesthouses, apartments, motels, villas)
+- Booking system with automatic date validation
+- Review system for accommodations
 
-## Structura Bazei de Date
+## Database Structure
 
-### Tabele Principale
+### Main Tables
 
-#### 1. **PERSOANE**
-Tabelă părinte care conține informații generale despre toate persoanele din sistem.
-- `CNP` (PK) - Cod Numeric Personal (13 cifre)
-- `adresa_email` (UK) - Adresă de email unică
-- `numar_telefon` (UK) - Număr de telefon unic (10 cifre)
+#### 1. **PERSOANE** (PEOPLE)
+Parent table containing general information about all people in the system.
+- `CNP` (PK) - Personal Numeric Code (13 digits)
+- `adresa_email` (UK) - Unique email address
+- `numar_telefon` (UK) - Unique phone number (10 digits)
 
-#### 2. **PROPRIETARI**
-Proprietari de cazări (moștenește din PERSOANE).
-- `CNP` (PK, FK) - Referință către PERSOANE
-- `nume_proprietar` (NN) - Nume complet (min. 8 caractere)
+#### 2. **PROPRIETARI** (OWNERS)
+Property owners (inherits from PERSOANE).
+- `CNP` (PK, FK) - Reference to PERSOANE
+- `nume_proprietar` (NN) - Full name (min. 8 characters)
 
-#### 3. **CLIENTI**
-Clienți care fac rezervări (moștenește din PERSOANE).
-- `CNP` (PK, FK) - Referință către PERSOANE
-- `nume_client` (NN) - Nume complet (min. 8 caractere)
+#### 3. **CLIENTI** (CLIENTS)
+Clients who make bookings (inherits from PERSOANE).
+- `CNP` (PK, FK) - Reference to PERSOANE
+- `nume_client` (NN) - Full name (min. 8 characters)
 
-#### 4. **CAZARI**
-Proprietăți disponibile pentru rezervare.
-- `id_cazare` (PK) - ID generat automat (≥ 50)
-- `CNP` (FK) - Proprietarul cazării
-- `nume_cazare` (NN) - Nume cazare (min. 5 caractere, fără cifre)
-- `pret24h` (NN) - Preț pe 24h (≥ 50 RON)
-- `adresa` (NN) - Adresă completă (min. 10 caractere)
-- `oras` (NN) - Oraș (min. 4 caractere, fără cifre)
-- `tara` (NN) - Țară (min. 2 caractere, fără cifre)
-- `tip_cazare` - Tipul cazării: `apartament`, `hotel`, `motel`, `pensiune`, `vila`
+#### 4. **CAZARI** (ACCOMMODATIONS)
+Properties available for booking.
+- `id_cazare` (PK) - Auto-generated ID (≥ 50)
+- `CNP` (FK) - Property owner
+- `nume_cazare` (NN) - Accommodation name (min. 5 characters, no digits)
+- `pret24h` (NN) - Price per 24h (≥ 50 RON)
+- `adresa` (NN) - Full address (min. 10 characters)
+- `oras` (NN) - City (min. 4 characters, no digits)
+- `tara` (NN) - Country (min. 2 characters, no digits)
+- `tip_cazare` - Accommodation type: `apartament`, `hotel`, `motel`, `pensiune`, `vila`
 
-#### 5. **REZERVARI**
-Rezervări efectuate de clienți.
-- `id_rezervare` (PK) - ID generat automat (≥ 2000)
-- `CNP` (FK) - Clientul care face rezervarea
-- `id_cazare` (FK) - Cazarea rezervată
-- `durata_zile` (NN) - Număr de zile (1-30)
-- `data_inceput` (NN) - Data de început (trebuie > SYSDATE)
+#### 5. **REZERVARI** (BOOKINGS)
+Bookings made by clients.
+- `id_rezervare` (PK) - Auto-generated ID (≥ 2000)
+- `CNP` (FK) - Client making the booking
+- `id_cazare` (FK) - Booked accommodation
+- `durata_zile` (NN) - Number of days (1-30)
+- `data_inceput` (NN) - Start date (must be > SYSDATE)
 
-#### 6. **RECENZII**
-Recenzii pentru rezervări completate.
-- `id_rezervare` (PK, FK) - Referință către REZERVARI
-- `continut` - Text recenzie (max. 2000 caractere, opțional)
+#### 6. **RECENZII** (REVIEWS)
+Reviews for completed bookings.
+- `id_rezervare` (PK, FK) - Reference to REZERVARI
+- `continut` - Review text (max. 2000 characters, optional)
 - `stele` (NN) - Rating (1-5)
 
-## Diagrama ER
+## ER Diagram
 
 ```
-PERSOANE (părinte)
+PERSOANE (parent)
     ├── PROPRIETARI
     │       └── CAZARI
     │               └── REZERVARI
@@ -77,42 +77,42 @@ PERSOANE (părinte)
             └── REZERVARI
 ```
 
-## Instalare
+## Installation
 
-### Prerequizite
-- Oracle Database 11g sau superior
-- Oracle SQL Developer (recomandat)
-- Privilegii de CREATE TABLE, SEQUENCE, TRIGGER
+### Prerequisites
+- Oracle Database 11g or higher
+- Oracle SQL Developer (recommended)
+- Privileges: CREATE TABLE, SEQUENCE, TRIGGER
 
-### Pași de Instalare
+### Installation Steps
 
-1. **Clonează repository-ul:**
+1. **Clone the repository:**
 ```bash
 git clone https://github.com/PanainteOctavian/BD-P-project.git
 cd BD-P-project
 ```
 
-2. **Creează structura bazei de date:**
+2. **Create the database structure:**
 ```sql
 @database/schema/scriptddl.sql
 ```
 
-3. **Inserează date de test:**
+3. **Insert test data:**
 ```sql
 @database/data/insert_data.sql
 ```
 
-4. **[Opțional] Testează constraint-urile:**
+4. **[Optional] Test constraints:**
 ```sql
 @database/tests/test_constraints.sql
 ```
 
-## Constrained și Reguli
+## Constraints and Rules
 
 ### Primary Keys (PK)
-- CNP pentru PERSOANE, PROPRIETARI, CLIENTI
-- id_cazare pentru CAZARI
-- id_rezervare pentru REZERVARI, RECENZII
+- CNP for PERSOANE, PROPRIETARI, CLIENTI
+- id_cazare for CAZARI
+- id_rezervare for REZERVARI, RECENZII
 
 ### Foreign Keys (FK)
 - PROPRIETARI.CNP → PERSOANE.CNP
@@ -126,28 +126,28 @@ cd BD-P-project
 - PERSOANE: adresa_email, numar_telefon
 
 ### Check Constraints (CK)
-- **CNP**: 13 cifre exacte
-- **Email**: Format valid (regex)
-- **Telefon**: 10 cifre exacte
-- **Nume**: Min. 8 caractere, doar litere și spații/cratimă
-- **Preț**: ≥ 50 RON
-- **Oraș/Țară**: Doar litere, min. 4/2 caractere
-- **Tip cazare**: Unul din: apartament, hotel, motel, pensiune, vila
-- **Durată**: Între 1 și 30 zile
-- **Stele**: Între 1 și 5
+- **CNP**: Exactly 13 digits
+- **Email**: Valid format (regex)
+- **Phone**: Exactly 10 digits
+- **Name**: Min. 8 characters, letters and spaces/hyphens only
+- **Price**: ≥ 50 RON
+- **City/Country**: Letters only, min. 4/2 characters
+- **Accommodation type**: One of: apartament, hotel, motel, pensiune, vila
+- **Duration**: Between 1 and 30 days
+- **Stars**: Between 1 and 5
 
 ### Triggers
-1. **trg_rezervari_BRIU**: Validează că data_inceput > SYSDATE
-2. **cazari_id_cazare_trg**: Auto-increment pentru id_cazare (sequence)
-3. **rezervari_id_rezervare_trg**: Auto-increment pentru id_rezervare (sequence)
+1. **trg_rezervari_BRIU**: Validates that data_inceput > SYSDATE
+2. **cazari_id_cazare_trg**: Auto-increment for id_cazare (sequence)
+3. **rezervari_id_rezervare_trg**: Auto-increment for id_rezervare (sequence)
 
 ### Sequences
 - `cazari_id_cazare_seq`: START WITH 50
 - `rezervari_id_rezervare_seq`: START WITH 2000
 
-## Exemple de Utilizare
+## Usage Examples
 
-### Adăugare cazare nouă
+### Adding a new accommodation
 ```sql
 INSERT INTO PERSOANE VALUES(1234567890123, 'john@example.com', '0712345678');
 INSERT INTO PROPRIETARI VALUES(1234567890123, 'John Doe Senior');
@@ -156,7 +156,7 @@ VALUES(1234567890123, 'Hotel Central', 150, 'Str. Principala 100',
        'Cluj-Napoca', 'Romania', 'hotel');
 ```
 
-### Efectuare rezervare
+### Making a booking
 ```sql
 INSERT INTO PERSOANE VALUES(2345678901234, 'jane@example.com', '0723456789');
 INSERT INTO CLIENTI VALUES(2345678901234, 'Jane Smith Junior');
@@ -164,9 +164,9 @@ INSERT INTO REZERVARI(CNP, ID_CAZARE, DURATA_ZILE, DATA_INCEPUT)
 VALUES(2345678901234, 50, 5, '15-DEC-2026');
 ```
 
-### Interogări utile
+### Useful Queries
 
-**Toate rezervările unui client:**
+**All bookings for a client:**
 ```sql
 SELECT c.NUME_CLIENT, caz.NUME_CAZARE, r.DATA_INCEPUT, r.DURATA_ZILE
 FROM CLIENTI c
@@ -175,7 +175,7 @@ JOIN CAZARI caz ON r.ID_CAZARE = caz.ID_CAZARE
 WHERE c.CNP = '5040917134679';
 ```
 
-**Recenziile unui client:**
+**Client reviews:**
 ```sql
 SELECT c.NUME_CLIENT, caz.NUME_CAZARE, rec.STELE, rec.CONTINUT
 FROM CLIENTI c
@@ -185,7 +185,7 @@ JOIN RECENZII rec ON r.ID_REZERVARE = rec.ID_REZERVARE
 WHERE c.CNP = '5040917134679';
 ```
 
-**Cazări după tip și preț:**
+**Accommodations by type and price:**
 ```sql
 SELECT NUME_CAZARE, ORAS, PRET24H, TIP_CAZARE
 FROM CAZARI
@@ -193,45 +193,45 @@ WHERE TIP_CAZARE = 'hotel' AND PRET24H < 200
 ORDER BY PRET24H;
 ```
 
-## Tehnologii Utilizate
+## Technologies Used
 
-- **Oracle Database 11g** - Sistem de gestiune a bazelor de date
-- **Oracle SQL Developer Data Modeler 24.3** - Design și modelare
-- **PL/SQL** - Triggers și proceduri stocate
-- **Oracle Sequences** - Auto-increment pentru ID-uri
+- **Oracle Database 11g** - Database management system
+- **Oracle SQL Developer Data Modeler 24.3** - Design and modeling
+- **PL/SQL** - Triggers and stored procedures
+- **Oracle Sequences** - Auto-increment for IDs
 
-## Testare
+## Testing
 
-Proiectul include teste comprehensive pentru toate constraint-urile:
+The project includes comprehensive tests for all constraints:
 
-- Testare Primary Keys (unicitate)
-- Testare Foreign Keys (integritate referențială)
-- Testare Check Constraints (validări de format și valori)
-- Testare Unique Constraints
-- Testare Not Null Constraints
-- Testare Triggers (validare date)
+- Primary Keys testing (uniqueness)
+- Foreign Keys testing (referential integrity)
+- Check Constraints testing (format and value validations)
+- Unique Constraints testing
+- Not Null Constraints testing
+- Triggers testing (data validation)
 
-Vezi fișierul `database/tests/test_constraints.sql` pentru detalii complete.
+See `database/tests/test_constraints.sql` for complete details.
 
-## Statistici Proiect
+## Project Statistics
 
-- **6** tabele
-- **29** constraint-uri (ALTER TABLE)
-- **3** trigger-uri
-- **2** secvențe
+- **6** tables
+- **29** constraints (ALTER TABLE)
+- **3** triggers
+- **2** sequences
 - **7** Foreign Keys
 - **3** Unique Constraints
 - **20+** Check Constraints
 
-## Autor
+## Author
 
 **Panainte Silviu-Octavian**
 - GitHub: [@PanainteOctavian](https://github.com/PanainteOctavian)
 
-## Licență
+## License
 
-Acest proiect este dezvoltat în scop educațional pentru cursul de Baze de Date.
+This project is developed for educational purposes as part of the Database course.
 
 ---
 
-**Notă**: Acest proiect a fost generat folosind Oracle SQL Developer Data Modeler 24.3.1.351.0831 pentru Oracle Database 11g.
+**Note**: This project was generated using Oracle SQL Developer Data Modeler 24.3.1.351.0831 for Oracle Database 11g.
