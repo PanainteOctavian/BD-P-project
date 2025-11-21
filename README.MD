@@ -1,8 +1,8 @@
-# 🏨 Hospitality Booking Platform - Database Project
+# Hospitality Booking Platform - Database Project
 
 Bază de date Oracle pentru o platformă de rezervări în domeniul ospitalității (hoteluri, pensiuni, apartamente, moteluri, vile).
 
-## 📋 Cuprins
+## Cuprins
 - [Descriere](#descriere)
 - [Structura Bazei de Date](#structura-bazei-de-date)
 - [Diagrama ER](#diagrama-er)
@@ -11,16 +11,16 @@ Bază de date Oracle pentru o platformă de rezervări în domeniul ospitalită�
 - [Exemple de Utilizare](#exemple-de-utilizare)
 - [Tehnologii Utilizate](#tehnologii-utilizate)
 
-## 📖 Descriere
+## Descriere
 
 Acest proiect implementează o bază de date completă pentru gestionarea unei platforme de rezervări în domeniul ospitalității. Baza de date suportă:
 
-- 👤 Gestionarea persoanelor (proprietari și clienți)
-- 🏠 Gestionarea cazărilor (hoteluri, pensiuni, apartamente, moteluri, vile)
-- 📅 Sistem de rezervări cu validare automată a datelor
-- ⭐ Sistem de recenzii pentru cazări
+- Gestionarea persoanelor (proprietari și clienți)
+- Gestionarea cazărilor (hoteluri, pensiuni, apartamente, moteluri, vile)
+- Sistem de rezervări cu validare automată a datelor
+- Sistem de recenzii pentru cazări
 
-## 🗂️ Structura Bazei de Date
+## Structura Bazei de Date
 
 ### Tabele Principale
 
@@ -65,7 +65,7 @@ Recenzii pentru rezervări completate.
 - `continut` - Text recenzie (max. 2000 caractere, opțional)
 - `stele` (NN) - Rating (1-5)
 
-## 🔗 Diagrama ER
+## Diagrama ER
 
 ```
 PERSOANE (părinte)
@@ -77,9 +77,7 @@ PERSOANE (părinte)
             └── REZERVARI
 ```
 
-![Diagrama ER](docs/diagrama_ER.png)
-
-## ⚙️ Instalare
+## Instalare
 
 ### Prerequizite
 - Oracle Database 11g sau superior
@@ -109,7 +107,7 @@ cd BD-P-project
 @database/tests/test_constraints.sql
 ```
 
-## 🔒 Constrained și Reguli
+## Constrained și Reguli
 
 ### Primary Keys (PK)
 - CNP pentru PERSOANE, PROPRIETARI, CLIENTI
@@ -147,7 +145,7 @@ cd BD-P-project
 - `cazari_id_cazare_seq`: START WITH 50
 - `rezervari_id_rezervare_seq`: START WITH 2000
 
-## 💡 Exemple de Utilizare
+## Exemple de Utilizare
 
 ### Adăugare cazare nouă
 ```sql
@@ -195,27 +193,27 @@ WHERE TIP_CAZARE = 'hotel' AND PRET24H < 200
 ORDER BY PRET24H;
 ```
 
-## 🛠️ Tehnologii Utilizate
+## Tehnologii Utilizate
 
 - **Oracle Database 11g** - Sistem de gestiune a bazelor de date
 - **Oracle SQL Developer Data Modeler 24.3** - Design și modelare
 - **PL/SQL** - Triggers și proceduri stocate
 - **Oracle Sequences** - Auto-increment pentru ID-uri
 
-## 📝 Testare
+## Testare
 
 Proiectul include teste comprehensive pentru toate constraint-urile:
 
-- ✅ Testare Primary Keys (unicitate)
-- ✅ Testare Foreign Keys (integritate referențială)
-- ✅ Testare Check Constraints (validări de format și valori)
-- ✅ Testare Unique Constraints
-- ✅ Testare Not Null Constraints
-- ✅ Testare Triggers (validare date)
+- Testare Primary Keys (unicitate)
+- Testare Foreign Keys (integritate referențială)
+- Testare Check Constraints (validări de format și valori)
+- Testare Unique Constraints
+- Testare Not Null Constraints
+- Testare Triggers (validare date)
 
 Vezi fișierul `database/tests/test_constraints.sql` pentru detalii complete.
 
-## 📊 Statistici Proiect
+## Statistici Proiect
 
 - **6** tabele
 - **29** constraint-uri (ALTER TABLE)
@@ -225,12 +223,12 @@ Vezi fișierul `database/tests/test_constraints.sql` pentru detalii complete.
 - **3** Unique Constraints
 - **20+** Check Constraints
 
-## 👤 Autor
+## Autor
 
 **Panainte Silviu-Octavian**
 - GitHub: [@PanainteOctavian](https://github.com/PanainteOctavian)
 
-## 📄 Licență
+## Licență
 
 Acest proiect este dezvoltat în scop educațional pentru cursul de Baze de Date.
 
