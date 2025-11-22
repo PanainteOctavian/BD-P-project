@@ -2,15 +2,6 @@
 
 Oracle database for a hospitality booking platform (hotels, guesthouses, apartments, motels, villas).
 
-# Visual Diagrams of the database
-
-
-
-
-
-     
-
-
 ## Table of Contents
 - [Description](#description)
 - [Database Structure](#database-structure)
