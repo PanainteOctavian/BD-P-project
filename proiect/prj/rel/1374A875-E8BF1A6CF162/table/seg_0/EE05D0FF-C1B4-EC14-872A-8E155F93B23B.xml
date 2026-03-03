@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EE05D0FF-C1B4-EC14-872A-8E155F93B23B" name="persoane">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>581BEC37-6444-856D-D90A-AC459D79B27E</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CNP" id="4C5E43F5-6B17-4CA1-B44F-D89BE9E1A62A">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>339FFB4D-B4A6-9F59-EC25-227984F21332</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<constraintName>persoane_CNP_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>13</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(CNP) = 13 and regexp_like(CNP, &apos;^[0-9]{13}$&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>13,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="adresa_email" id="072A8A7C-1F16-D9EB-7109-852D9BEC4D23">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>188D4ACC-DE8E-8DFE-5B5A-99364FD54384</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<constraintName>persoane_adresa_email_ck</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(adresa_email, &apos;[a-z0-9._%-]+@[a-z0-9._%-]+\.[a-z]{2,4}&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numar_telefon" id="048A25A7-7565-470D-414A-01F936EFDDDD">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>B736A715-1423-403F-511F-8AEB5948B95F</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<constraintName>persoane_numar_telefon_ck</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>13</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(numar_telefon) = 13 and regexp_like(numar_telefon, &apos;^\\+[0-9]{12}$&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>13,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1674A994-4FE4-B52B-70C8-5E98C33C6F8C" name="persoane_PK">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>EED62E57-799D-AAC9-32E0-7FE65C19B9D7</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4C5E43F5-6B17-4CA1-B44F-D89BE9E1A62A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6D2D3347-6D58-7D9C-E340-1CFB1310646E" name="persoane_adresa_email_uk">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>6DDE77DF-B25F-0F8B-116A-6C6FD44B1DA8</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="072A8A7C-1F16-D9EB-7109-852D9BEC4D23"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CAF4B094-B081-72D4-2BBB-A0A68B98F7CF" name="persoane_numar_telefon_uk">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>D3991C05-4020-5B41-5102-643B44F87CD3</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="048A25A7-7565-470D-414A-01F936EFDDDD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

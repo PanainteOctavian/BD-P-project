@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="8FFC9DA6-BECA-1120-A39F-82F0CCC0868C" containerWithKeyObject="441BF9AD-C32F-1928-1707-E0A31ACB5A18" localFKIndex="47E5DF08-54A8-A727-6FF8-8BEEDF35C55D" name="proprietari_cazari_fk">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:28:46 UTC</createdTime>
+<generatorID>5B429734-34F5-2EEF-E1C0-B81B401A5FA6</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<referredTableLongName>proprietari</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A71B9DF5-60D0-FCEB-94BF-2554741FB4A4</referredTableID>
+<keyObject>9AE83220-CC2D-6BA9-BF9B-81E61E0402DA</keyObject>
+<referredKeyID>9AE83220-CC2D-6BA9-BF9B-81E61E0402DA</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>CNP</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

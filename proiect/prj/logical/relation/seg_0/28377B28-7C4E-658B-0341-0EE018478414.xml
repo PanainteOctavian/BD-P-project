@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="clienti_rezervari_fk" directorySegmentName="seg_0" id="28377B28-7C4E-658B-0341-0EE018478414">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 10:56:45 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<sourcePk>7BE71886-691B-C3B5-0530-6AEAC921C5CC</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>poate face mai multe</nameOnSource>
+<nameOnTarget>este facuta de un</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>59FB7490-89F5-184E-3D6F-AFEF5BE4DADE</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>8969394D-6DDB-FDC7-7D4A-E8A231071385</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

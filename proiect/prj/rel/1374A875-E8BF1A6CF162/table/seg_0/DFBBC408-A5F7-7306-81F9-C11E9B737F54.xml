@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DFBBC408-A5F7-7306-81F9-C11E9B737F54" name="proprietari">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>7725E190-D0F9-1E3A-5D4F-5A47E5C6F961</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CNP" id="A5998587-40D5-334C-581C-08B73F1AE6B8">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>87D550FB-9FCA-C49D-FC4D-67B0662847A0</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>13</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="61C90654-4931-4C17-0379-090EB33AC545" referredColumn="4C5E43F5-6B17-4CA1-B44F-D89BE9E1A62A"/>
+</associations>
+</Column>
+<Column name="nume_proprietar" id="E9AD45C9-793A-5C4B-A670-6EC8C1246C16">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>454F2A79-BAAC-3BCB-7708-19714829FC8D</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<constraintName>proprietari_nume_proprietar_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(nume_proprietar)  &gt;= 8 and regexp_like(nume_proprietar, &apos;^[A-Za-zĂÂÎȘȚăâîșț -]+$&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="29C51855-23B2-6369-8B69-B02611D1FE26" name="proprietari_PK">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>5DDF547F-232D-1791-8851-9CB0F46A0565</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A5998587-40D5-334C-581C-08B73F1AE6B8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D04451FF-6DB9-F6DC-3A3E-66A30BB252D1" name="persoane_proprietari_fk">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>94E7FC75-13D2-9050-4DDF-6985BA775856</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A5998587-40D5-334C-581C-08B73F1AE6B8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

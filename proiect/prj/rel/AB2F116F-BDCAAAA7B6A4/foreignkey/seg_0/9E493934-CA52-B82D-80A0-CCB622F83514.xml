@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="9E493934-CA52-B82D-80A0-CCB622F83514" containerWithKeyObject="8960276C-93BB-9645-48E9-B3333BB0CC69" localFKIndex="3501A177-24BB-56C6-F2B6-497CFBD937FD" name="cazari_rezervari_fk">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:28:46 UTC</createdTime>
+<generatorID>8A5D2E46-8552-D5B5-9EDF-26B92DA061A2</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<referredTableLongName>cazari</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>441BF9AD-C32F-1928-1707-E0A31ACB5A18</referredTableID>
+<keyObject>35C3E3EE-7FF2-68B2-F594-63474B656A54</keyObject>
+<referredKeyID>35C3E3EE-7FF2-68B2-F594-63474B656A54</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_cazare</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B1871294-C38D-774F-7400-15A4C8CADCD9" name="clienti">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:28:46 UTC</createdTime>
+<generatorID>59FB7490-89F5-184E-3D6F-AFEF5BE4DADE</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CNP" id="C736DD66-97AE-9610-6C0D-CEA6D592F6EC">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:28:46 UTC</createdTime>
+<generatorID>9AF6D937-1C6B-498D-7B03-181C596F2B78</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>13</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3619F34B-C079-8EFE-3260-F294BDBFBE3E" referredColumn="864B724E-E661-F7AC-6339-B1361DB82AEF"/>
+</associations>
+</Column>
+<Column name="nume_client" id="D5953CFE-2A48-62C7-E488-4B9A4A8C8A0E">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:28:46 UTC</createdTime>
+<generatorID>95FCA1EB-D1E9-FFB8-A1D6-856C61E2EDE3</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<constraintName>clienti_nume_client_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(nume_client) &gt;= 8 and regexp_like(nume_client, &apos;^[A-Za-zĂÂÎȘȚăâîșț -]+$&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1E8FA657-4F75-32A0-4D66-2A464C8FD580" name="clienti_PK">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:28:46 UTC</createdTime>
+<generatorID>7BE71886-691B-C3B5-0530-6AEAC921C5CC</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C736DD66-97AE-9610-6C0D-CEA6D592F6EC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="34CBFFC0-DE04-B78B-D875-B679B06B42FA" name="persoane_clienti_fk">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:28:46 UTC</createdTime>
+<generatorID>2517640B-D3F2-0CA0-24DA-3A859A19337A</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C736DD66-97AE-9610-6C0D-CEA6D592F6EC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

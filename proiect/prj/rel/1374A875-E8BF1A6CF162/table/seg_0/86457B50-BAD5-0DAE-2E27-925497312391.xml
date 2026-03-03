@@ -1,0 +1,126 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="86457B50-BAD5-0DAE-2E27-925497312391" name="rezervari">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>8969394D-6DDB-FDC7-7D4A-E8A231071385</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_rezervare" id="83EB7D9C-A769-0AAF-A40A-656D068DFE6C">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>83EE7B99-93A4-9A05-AE01-388FAB7EF11C</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<constraintName>rezervari_id_rezervare_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="id_rezervare &gt;= 2000"/>
+</checkConstraint>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CNP" id="1CC1009B-C7AE-3334-3976-F9682A5C5333">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>F8D16957-048C-06CD-447C-302AF04F9ECE</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>13</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9C607ED1-DA0B-FAE4-9C70-E584926AC7A0" referredColumn="BC918775-FF50-8C22-6206-9594C36C1055"/>
+</associations>
+</Column>
+<Column name="id_cazare" id="DDB72F9B-E5A6-E529-FF80-BFD79D334F46">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>BAEBAF18-D43C-4981-9305-B8A7952E5B53</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2DA2EA78-785F-C8DE-3DCA-DF3960B5D902" referredColumn="78E70E91-DF0C-4329-F0FD-8D4DA06B0622"/>
+</associations>
+</Column>
+<Column name="durata_zile" id="AD73365D-E5C5-C81C-72B4-5EC2847B04C1">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>23D0B93A-248C-80F7-CD54-0BCBD3722CD3</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<constraintName>rezervari_durata_zile_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>1</beginValue>
+<endValue>30</endValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="data_inceput" id="FD483454-FCB4-BA35-5C36-6F5C4DC55A5F">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>C1828346-C351-8A49-64B6-B409CBC89AFB</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C7A285C5-B962-D346-D821-B45970FF8286" name="rezervari_PK">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>A1E06880-1B6F-12AD-841E-4E48F4E33355</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="83EB7D9C-A769-0AAF-A40A-656D068DFE6C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C70F9A1E-A674-248C-ADCB-2F744FEA6C42" name="cazari_rezervari_fk">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>8A5D2E46-8552-D5B5-9EDF-26B92DA061A2</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DDB72F9B-E5A6-E529-FF80-BFD79D334F46"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3740ED04-25B0-258D-F888-936D737598A0" name="clienti_rezervari_fk">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>28377B28-7C4E-658B-0341-0EE018478414</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1CC1009B-C7AE-3334-3976-F9682A5C5333"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

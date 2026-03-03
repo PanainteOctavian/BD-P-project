@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1C37F9FA-267A-FE2E-6F5B-FBD0963EC871" name="recenzii">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>D9D05249-AFC7-EF0E-C9AD-8B8B340D35A9</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_rezervare" id="4B89A967-5C0F-9F4C-8287-4F96651CCC9B">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>913A9318-85C9-521C-89E3-D88357BDA69F</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="52F092F6-E1CD-734B-EA9C-8A0485811732" referredColumn="83EB7D9C-A769-0AAF-A40A-656D068DFE6C"/>
+</associations>
+</Column>
+<Column name="continut" id="0992B4F6-CD55-02B9-0E7C-BC6824EAA1FD">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>71684165-FF7C-D8FE-C514-6E5575DC6185</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000</dataTypeSize>
+<ownDataTypeParameters>2000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stele" id="F56AC1E3-D423-DA05-B915-19C14EB4C639">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>196A6F58-92DA-D2B3-4938-AD62B8905364</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<constraintName>recenzii_stele_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>1</beginValue>
+<endValue>5</endValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="96BAC3BD-D3AB-B989-38F1-EA66A24C54AA" name="recenzii_PK">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>5FD99655-F0E5-2B73-C0AF-82A81CBA5CFB</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4B89A967-5C0F-9F4C-8287-4F96651CCC9B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6ACC358F-EFFA-E39D-5FA2-26F012F3C976" name="rezervari_recenzii_fk">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:46:17 UTC</createdTime>
+<generatorID>736E4898-A031-362D-4EA6-F5A536764151</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4B89A967-5C0F-9F4C-8287-4F96651CCC9B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

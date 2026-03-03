@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="rezervari_recenzii_fk" directorySegmentName="seg_0" id="736E4898-A031-362D-4EA6-F5A536764151">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 10:57:16 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<sourcePk>A1E06880-1B6F-12AD-841E-4E48F4E33355</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>poate avea o</nameOnSource>
+<nameOnTarget>este scrisa pentru o</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>8969394D-6DDB-FDC7-7D4A-E8A231071385</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>D9D05249-AFC7-EF0E-C9AD-8B8B340D35A9</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

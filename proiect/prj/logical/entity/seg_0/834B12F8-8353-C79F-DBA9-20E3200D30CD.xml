@@ -1,0 +1,173 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="834B12F8-8353-C79F-DBA9-20E3200D30CD" name="cazari">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-25 11:02:30 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<engineerTo>
+<item key="1374A875-E1FD-E7CB-BBC7-E8BF1A6CF162" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_cazare" id="207BB9EC-3087-F94B-621A-7BF7E710ADEC">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-25 11:20:32 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<engineerTo>
+<item key="1374A875-E1FD-E7CB-BBC7-E8BF1A6CF162" value="true"/>
+</engineerTo>
+<constraintName>cazari_id_cazare_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="id_cazare &gt;= 50"/>
+</checkConstraint>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CNP" id="C41C3517-728F-4B8E-A90A-9D7FF0E51D33">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 10:39:18 UTC</createdTime>
+<generatorID>5B429734-34F5-2EEF-E1C0-B81B401A5FA6</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<engineerTo>
+<item key="1374A875-E1FD-E7CB-BBC7-E8BF1A6CF162" value="true"/>
+</engineerTo>
+<referedAttribute>87D550FB-9FCA-C49D-FC4D-67B0662847A0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>13</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nume_cazare" id="10C1C545-CEFB-C334-53FB-EBD9306ABCF4">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-25 11:21:13 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<engineerTo>
+<item key="1374A875-E1FD-E7CB-BBC7-E8BF1A6CF162" value="true"/>
+</engineerTo>
+<constraintName>cazari_nume_cazare_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(nume_cazare) &gt;= 5 and regexp_like(nume_cazare, &apos;^[A-Za-zĂÂÎȘȚăâîșț ]+$&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pret24h" id="618FCB09-A904-F003-BCB4-33BB3F13C415">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 11:31:28 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<engineerTo>
+<item key="1374A875-E1FD-E7CB-BBC7-E8BF1A6CF162" value="true"/>
+</engineerTo>
+<constraintName>cazari_pret_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="pret24h &gt;= 50.00"/>
+</checkConstraint>
+<ownDataTypeParameters>,6,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="adresa" id="EA23166F-18D3-1732-1184-EDD7EC22F2CF">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-25 11:21:48 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<engineerTo>
+<item key="1374A875-E1FD-E7CB-BBC7-E8BF1A6CF162" value="true"/>
+</engineerTo>
+<constraintName>cazari_adresa_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(adresa) &gt;= 10"/>
+</checkConstraint>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="oras" id="90B70677-C099-FFE5-D258-41593873DC70">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-25 11:23:30 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<engineerTo>
+<item key="1374A875-E1FD-E7CB-BBC7-E8BF1A6CF162" value="true"/>
+</engineerTo>
+<constraintName>cazari_oras_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(oras) &gt;= 4 and regexp_like(oras, &apos;^[A-Za-zĂÂÎȘȚăâîșț ]+$&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tara" id="F40405EC-E0AA-5A22-AC0E-2D670FAEE951">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-25 11:26:18 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<engineerTo>
+<item key="1374A875-E1FD-E7CB-BBC7-E8BF1A6CF162" value="true"/>
+</engineerTo>
+<constraintName>cazari_tara_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(tara) &gt;= 2 and regexp_like(tara, &apos;^[A-Za-zĂÂÎȘȚăâîșț ]+$&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tip_cazare" id="C35E9BCB-DB43-82D2-F4DA-A9B2862121B8">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-25 11:56:31 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<engineerTo>
+<item key="1374A875-E1FD-E7CB-BBC7-E8BF1A6CF162" value="true"/>
+</engineerTo>
+<constraintName>cazari_tip_cazare_ck</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<listOfValues>
+<valueDef value="apartament" description=""/>
+<valueDef value="hotel" description=""/>
+<valueDef value="motel" description=""/>
+<valueDef value="pensiune" description=""/>
+<valueDef value="vila" description=""/>
+</listOfValues>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="61639C33-143F-3419-AD03-623B92C9C6B5" name="cazari PK">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-25 12:00:42 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<engineerTo>
+<item key="1374A875-E1FD-E7CB-BBC7-E8BF1A6CF162" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>207BB9EC-3087-F94B-621A-7BF7E710ADEC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

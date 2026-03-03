@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A99D1B8D-863E-8468-1981-B628E84AF30D" containerWithKeyObject="EC2B3768-88A8-0F6D-D436-5B387847022F" localFKIndex="AAD6818A-13B8-ED1A-85E0-9944E6C4542A" name="rezervari_recenzii_fk">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:28:46 UTC</createdTime>
+<generatorID>736E4898-A031-362D-4EA6-F5A536764151</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<referredTableLongName>rezervari</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8960276C-93BB-9645-48E9-B3333BB0CC69</referredTableID>
+<keyObject>681C2127-F4FD-74A4-F49F-713C5F659925</keyObject>
+<referredKeyID>681C2127-F4FD-74A4-F49F-713C5F659925</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_rezervare</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

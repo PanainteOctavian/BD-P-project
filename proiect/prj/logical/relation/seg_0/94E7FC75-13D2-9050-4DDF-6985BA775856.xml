@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="persoane_proprietari_fk" directorySegmentName="seg_0" id="94E7FC75-13D2-9050-4DDF-6985BA775856">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 10:38:09 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<sourcePk>EED62E57-799D-AAC9-32E0-7FE65C19B9D7</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>poate fi</nameOnSource>
+<nameOnTarget>este</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>581BEC37-6444-856D-D90A-AC459D79B27E</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>7725E190-D0F9-1E3A-5D4F-5A47E5C6F961</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

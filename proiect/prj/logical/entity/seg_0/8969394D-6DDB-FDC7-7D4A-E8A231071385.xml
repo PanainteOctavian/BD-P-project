@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8969394D-6DDB-FDC7-7D4A-E8A231071385" name="rezervari">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-25 11:03:21 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<engineerTo>
+<item key="1374A875-E1FD-E7CB-BBC7-E8BF1A6CF162" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_rezervare" id="83EE7B99-93A4-9A05-AE01-388FAB7EF11C">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-25 12:34:06 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<engineerTo>
+<item key="1374A875-E1FD-E7CB-BBC7-E8BF1A6CF162" value="true"/>
+</engineerTo>
+<constraintName>rezervari_id_rezervare_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="id_rezervare &gt;= 2000"/>
+</checkConstraint>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CNP" id="F8D16957-048C-06CD-447C-302AF04F9ECE">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 10:56:45 UTC</createdTime>
+<generatorID>28377B28-7C4E-658B-0341-0EE018478414</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<engineerTo>
+<item key="1374A875-E1FD-E7CB-BBC7-E8BF1A6CF162" value="true"/>
+</engineerTo>
+<referedAttribute>9AF6D937-1C6B-498D-7B03-181C596F2B78</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>13</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_cazare" id="BAEBAF18-D43C-4981-9305-B8A7952E5B53">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 10:57:46 UTC</createdTime>
+<generatorID>8A5D2E46-8552-D5B5-9EDF-26B92DA061A2</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<engineerTo>
+<item key="1374A875-E1FD-E7CB-BBC7-E8BF1A6CF162" value="true"/>
+</engineerTo>
+<referedAttribute>207BB9EC-3087-F94B-621A-7BF7E710ADEC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="durata_zile" id="23D0B93A-248C-80F7-CD54-0BCBD3722CD3">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-25 11:54:56 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<engineerTo>
+<item key="1374A875-E1FD-E7CB-BBC7-E8BF1A6CF162" value="true"/>
+</engineerTo>
+<constraintName>rezervari_durata_zile_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>1</beginValue>
+<endValue>30</endValue>
+</rangeDef>
+</listOfRanges>
+</Attribute>
+<Attribute name="data_inceput" id="C1828346-C351-8A49-64B6-B409CBC89AFB">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-25 11:55:07 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<engineerTo>
+<item key="1374A875-E1FD-E7CB-BBC7-E8BF1A6CF162" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A1E06880-1B6F-12AD-841E-4E48F4E33355" name="rezervari PK">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-25 12:34:26 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<engineerTo>
+<item key="1374A875-E1FD-E7CB-BBC7-E8BF1A6CF162" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>83EE7B99-93A4-9A05-AE01-388FAB7EF11C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

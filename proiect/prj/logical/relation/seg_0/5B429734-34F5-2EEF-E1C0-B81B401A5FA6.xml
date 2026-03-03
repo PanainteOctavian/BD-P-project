@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="proprietari_cazari_fk" directorySegmentName="seg_0" id="5B429734-34F5-2EEF-E1C0-B81B401A5FA6">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 10:39:18 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<sourcePk>5DDF547F-232D-1791-8851-9CB0F46A0565</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>are mai multe</nameOnSource>
+<nameOnTarget>apartine unui</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>7725E190-D0F9-1E3A-5D4F-5A47E5C6F961</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>834B12F8-8353-C79F-DBA9-20E3200D30CD</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

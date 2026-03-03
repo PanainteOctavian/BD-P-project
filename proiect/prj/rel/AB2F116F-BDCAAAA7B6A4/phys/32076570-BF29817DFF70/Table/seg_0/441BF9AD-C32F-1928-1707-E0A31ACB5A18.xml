@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="cazari" directorySegmentName="seg_0" id="441BF9AD-C32F-1928-1707-E0A31ACB5A18">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:31:33 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="oras" id="15397BE3-43B2-7104-1AFB-E15919154ABE">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:31:33 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="tara" id="39C682C7-C613-43F3-8B5F-CF49C14E5709">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:31:33 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="tip_cazare" id="4390D410-C48E-7C3F-A472-25F54CFB33FD">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:31:33 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_cazare" id="5B67F92A-4F0E-D22E-31C6-565D0FCD0398">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:31:33 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="adresa" id="A2034A0A-8E45-789C-2798-1201782F8180">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:31:33 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="nume_cazare" id="AFDA0F88-0EC9-3222-E3E4-F4EFC3B86ED6">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:31:33 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="pret24h" id="C0F55B06-793B-3816-160F-63307F85EAC7">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:31:33 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CNP" id="F93C1700-1DDB-647A-D24D-34CD5BC0D567">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:31:33 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="proprietari_cazari_fk" id="47E5DF08-54A8-A727-6FF8-8BEEDF35C55D">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:31:33 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="cazari_PK" id="35C3E3EE-7FF2-68B2-F594-63474B656A54">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:31:33 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

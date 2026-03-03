@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="persoane" directorySegmentName="seg_0" id="D20644AD-0A5C-2B00-8674-15E364364F48">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:31:33 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="adresa_email" id="73C65141-84DF-168B-69DD-C95970C3ED90">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:31:33 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CNP" id="864B724E-E661-F7AC-6339-B1361DB82AEF">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:31:33 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="numar_telefon" id="B0451ACE-732E-8BFA-6EBB-E06B2EE6BB8E">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:31:33 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="persoane_PK" id="3AD6A0F7-F633-8A9E-0723-09AD8A744A6B">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:31:33 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="persoane_adresa_email_uk" id="7A4C8E28-5929-EDAE-675C-605E391152FE">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:31:33 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="persoane_numar_telefon_uk" id="8F96F21B-6084-D66E-51C0-EC35BDCE3D93">
+<createdBy>octavian</createdBy>
+<createdTime>2025-11-13 11:31:33 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev11g>

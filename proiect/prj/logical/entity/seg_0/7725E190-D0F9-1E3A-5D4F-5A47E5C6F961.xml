@@ -1,0 +1,53 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7725E190-D0F9-1E3A-5D4F-5A47E5C6F961" name="proprietari">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-25 10:58:27 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="CNP" id="87D550FB-9FCA-C49D-FC4D-67B0662847A0">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 10:38:09 UTC</createdTime>
+<generatorID>94E7FC75-13D2-9050-4DDF-6985BA775856</generatorID>
+<ownerDesignName>prj</ownerDesignName>
+<referedAttribute>339FFB4D-B4A6-9F59-EC25-227984F21332</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>13</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nume_proprietar" id="454F2A79-BAAC-3BCB-7708-19714829FC8D">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-25 11:12:51 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<constraintName>proprietari_nume_proprietar_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(nume_proprietar)  &gt;= 8 and regexp_like(nume_proprietar, &apos;^[A-Za-zĂÂÎȘȚăâîșț -]+$&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5DDF547F-232D-1791-8851-9CB0F46A0565" name="proprietari PK">
+<createdBy>octavian</createdBy>
+<createdTime>2025-10-30 10:38:36 UTC</createdTime>
+<ownerDesignName>prj</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>87D550FB-9FCA-C49D-FC4D-67B0662847A0</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
