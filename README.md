@@ -4,7 +4,7 @@ Database Project - Accommodation Booking System
 | Field | Details |
 |------|---------|
 | **Student** | Panainte Silviu-Octavian, Group 1311A |
-| **Coordinator** | Lecturer Dr. Eng. Mironeanu Catalin |
+| **Coordinator** | Phd. Eng. Mironeanu Catalin |
 | **Theme** | Accommodation Booking Website (Booking.com style) |
 
 ### Description
