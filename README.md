@@ -5,10 +5,11 @@
 | **Coordinator** | Phd. Eng. Mironeanu Catalin |
 | **Theme** | Accommodation Booking Website (Booking.com style) |
 
-<img width="977" height="604" alt="image" src="https://github.com/user-attachments/assets/efbdcce9-db57-42b7-87ae-057b1ee91f18" />
-
 ### Description
 The application manages a booking database for a travel website. It stores tourist locations, stay durations, accommodation prices, and booking timestamps. The platform manages customer bookings, reviews, and personal user contact details.
+
+Diagram
+<img width="977" height="604" alt="image" src="https://github.com/user-attachments/assets/efbdcce9-db57-42b7-87ae-057b1ee91f18" />
 
 **Key Simplifications:**
 - No all-inclusive offers or meal options.
