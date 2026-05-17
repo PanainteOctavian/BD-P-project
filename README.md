@@ -2,7 +2,7 @@
 | Field | Details |
 |------|---------|
 | **Student** | Panainte Silviu-Octavian |
-| **Coordinator** | Phd. Eng. Mironeanu Catalin |
+| **Coordinator** | PhD. Eng. Mironeanu Catalin |
 | **Theme** | Accommodation Booking Website (Booking.com style) |
 
 Diagram
